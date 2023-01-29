@@ -14,7 +14,6 @@
 <?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.shape.Ellipse?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="844.0" prefWidth="390.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Home">
    <top>
       <Pane prefHeight="141.0" prefWidth="390.0" BorderPane.alignment="CENTER">
@@ -77,7 +76,7 @@
    <center>
       <Pane prefHeight="200.0" prefWidth="303.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-38.0" layoutY="223.0" prefHeight="96.0" prefWidth="324.0" text=" Welcome" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+            <Label fx:id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-38.0" layoutY="223.0" prefHeight="96.0" prefWidth="324.0" text=" Welcome" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
                <font>
                   <Font name="Agency FB" size="36.0" />
                </font>

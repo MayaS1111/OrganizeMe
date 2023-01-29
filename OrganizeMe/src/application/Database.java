@@ -13,7 +13,7 @@ public class Database {
     public void connectDatabase() throws IOException, SQLException {
         connection = DriverManager.getConnection("jdbc:ucanaccess://OrganizeMeDatabase.accdb","","");
         statement = connection.createStatement();
-        //System.out.println("Database Connected");
+        System.out.println("Database Connected");
     }
 
     public void setRSLogin() throws IOException {

@@ -14,10 +14,11 @@ public class Main extends Application {
         try {
             //Database database =  new Database();
             //database.connect_to_database();
+
             Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
             //Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
+
             Scene scene = new Scene(root,390,844);//(root,1920,1030);
-            //Image icon= new Image("food.png");
             //stage.getIcons().add(icon);
             stage.setTitle("Login");
             stage.setScene(scene);

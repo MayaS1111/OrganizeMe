@@ -18,7 +18,7 @@ public class Settings extends Nav{
     @FXML private ColorPicker  homeBackgroundColor, trackerBackgroundColor, calendarBackgroundColor, noteBackgroundColor, reminderBackgroundColor, settingsBackgroundColor;
     @FXML private Button applyBackgroundColorButton;
 
-    private Database database = new Database();
+    //private Database database = new Database();
     private CustomColors customColor = new CustomColors();
 
 
@@ -70,7 +70,8 @@ public class Settings extends Nav{
         customColor.setSettingsColor(settingsColor);
 
         database.connectDatabase();
-        if (username.equals("maya33")) { //ADD
+
+        if (username.equals("maya33")) { //ADD TO DATABASE
             String insertSQL = "INSERT INTO Settings_Colors(ID, Username, HomeColor, TrackerColor, CalendarColor, NoteColor, ReminderColor, SettingsColor) "
                     + "VALUES (?,?,?,?,?,?,?,?)";
             database.updatefield = database.connection.prepareStatement(insertSQL);
@@ -85,7 +86,7 @@ public class Settings extends Nav{
             database.updatefield.executeUpdate();
             System.out.println("ADDED");
         }
-        else { //UPDATE
+        else { //UPDATE DATABASE
             String updateSQL = "UPDATE Settings_Colors " + "SET HomeColor = ?," + "TrackerColor = ?, "  + "CalendarColor = ?, " + "NoteColor = ?, " + "ReminderColor = ?, " + "SettingsColor = ? "
                     + "WHERE Username = " + username;
             database.updatefield = database.connection.prepareStatement(updateSQL);
